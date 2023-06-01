@@ -10,7 +10,7 @@ import { SplashScreen } from "./components/SplashScreen";
 
 import { useHeightUnit } from "./hooks/useHeightUnit";
 
-import { $userAuth, $userInfo } from "./stores/user";
+import { $userAuth, $userInfo, signOut } from "./stores/user";
 
 function UserRoutes() {
 	const userInfo = useStore($userInfo);
@@ -21,7 +21,10 @@ function UserRoutes() {
 				path="/"
 				element={
 					<>
-						Hi, {userInfo().displayName} ({userInfo().email}), <Button css={{ marginTop: 24 }}>Выйти</Button>
+						Hi, {userInfo().displayName} ({userInfo().email}),{" "}
+						<Button onClick={signOut} css={{ marginTop: 24 }}>
+							Выйти
+						</Button>
 					</>
 				}></Route>
 		</Routes>
