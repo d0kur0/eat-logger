@@ -6,10 +6,8 @@ import illustration from "../assets/signInImage.svg";
 
 export function SignIn() {
 	return (
-		<Box>
-			<Heading size="3xl" css={{}}>
-				Привет
-			</Heading>
+		<Box css={{ padding: "30px" }}>
+			<Heading size="3xl">Привет</Heading>
 
 			<Text size="sm" css={{ marginTop: 15 }}>
 				Для работы приложения нужна авторизация, вводить почту или номер телефона не потребуется, достаточно

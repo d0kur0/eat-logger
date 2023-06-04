@@ -4,6 +4,7 @@ import { useStore } from "@nanostores/solid";
 import { Route, Router, Routes } from "@solidjs/router";
 import { Match, Switch } from "solid-js";
 
+import { Logs } from "./pages/Logs";
 import { SignIn } from "./pages/SignIn";
 
 import { SplashScreen } from "./components/SplashScreen";
@@ -17,16 +18,7 @@ function UserRoutes() {
 
 	return (
 		<Routes>
-			<Route
-				path="/"
-				element={
-					<>
-						Hi, {userInfo().displayName} ({userInfo().email}),{" "}
-						<Button onClick={signOut} css={{ marginTop: 24 }}>
-							Выйти
-						</Button>
-					</>
-				}></Route>
+			<Route path="/" element={<Logs />} />
 		</Routes>
 	);
 }
